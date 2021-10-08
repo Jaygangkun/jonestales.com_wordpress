@@ -25,7 +25,23 @@ $readmore = ! empty( $options['read_more_text'] ) ? $options['read_more_text'] :
 
         <div class="entry-container">
             <span class="cat-links">
-                <?php echo magazinews_article_footer_meta(); ?>
+            <?php
+            $book_categories = get_the_terms(get_the_ID(), 'book_categories');
+            if($book_categories) {
+                ?>
+                <ul class="post-categories">
+                    <?php
+                    foreach($book_categories as $book_category) {
+                        ?>
+                        <li><a href="<?php echo get_term_link($book_category)?>"><?php echo $book_category->name ?></a></li>
+                        <?php
+                    }
+                    ?>
+                </ul>
+                <?php
+            }
+            ?>
+                <?php //echo magazinews_article_footer_meta(); ?>
             </span><!-- .cat-links -->
 
             <header class="entry-header">

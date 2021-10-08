@@ -93,7 +93,7 @@ if ( ! function_exists( 'magazinews_render_headline_section' ) ) :
             return;
         } ?>
 
-        <div id="breaking-news">
+        <div id="breaking-news" style="display: none">
             <div class="wrapper">
                 <div class="news-header">
                     <span class="news-title"><?php echo esc_html( $title ); ?></span>

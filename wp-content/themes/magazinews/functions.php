@@ -369,3 +369,5 @@ require get_template_directory() . '/inc/jetpack.php';
  * Load core file
  */
 require get_template_directory() . '/inc/core.php';
+
+require get_template_directory() . '/widget-book-categories.php';

@@ -234,8 +234,8 @@ if ( ! function_exists( 'magazinews_header_image' ) ) :
 	 *
 	 */
 	function magazinews_header_image() {
-		if ( magazinews_is_frontpage() )
-			return;
+		// if ( magazinews_is_frontpage() )
+		// 	return;
 		$header_image = get_header_image();
 		if ( is_singular() ) :
 			$header_image = has_post_thumbnail() ? get_the_post_thumbnail_url( get_the_id(), 'full' ) : $header_image;
